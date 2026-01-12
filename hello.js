@@ -5,4 +5,9 @@ var b=12;
 var b=15;
 let c=15;
 //let c;
+
+
+
+
+
 let n=10
