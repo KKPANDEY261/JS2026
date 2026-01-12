@@ -1,9 +1,8 @@
-
-        
-b=5;
-c="10";
-d=b+c;
-
-console.log(c/b);
-console.log(c*b);
-
+a=12;
+a=13;
+a=13;
+var b=12;
+var b=15;
+let c=15;
+//let c;
+let n=10
