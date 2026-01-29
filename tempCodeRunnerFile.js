@@ -1,33 +1,48 @@
-a=16 & 18;
-//output ((10000 & 10010) = 10000) = 16
-console.log(a);
-a= 16 | 18;
-// output ((10000 & 10010) = 10010) = 18
-console.log(a);
-a= 9 | 7 ;
-//output 1001 & 0111 = 1111=15
-console.log(a);
-a=~11;
-// 00000000000000000000000000001011
-// 1            1111111111111111111111111110100
-// -2147483648
-//2147483647-11
-//output -2147483648+2147483636=-12
-console.log(a);
-
-a=9^7;
-//output 1001 & 0111 = 1110=14
-console.log(a);
-a=20<<2;
-//output 10100 <<2=1010000=80
-console.log(a);
-a= 20>>2;
-//output  10100 >>2= 101=5
-console.log(a);
-a=20>>>2;
-//output 00000000000000000000000000010100
-    //   00                           101=5
-a=-20>>>2;
-       //   11111111111111111111111111101100     
-       //   00111111111111111111111111111011
-console.log(a);
+//using switch
+function add(a,b){
+   return a+b;
+}
+function substract(a,b){
+   return a-b;
+}
+function multiply(a,b){
+   return a*b;
+}
+function divide(a,b){
+   return (b===0)?"not divide by zero": a/b;
+}
+function exponentation(a,b){
+   return a**b;
+}
+function modulus(a,b){
+   return a%b;
+}
+function calculatorswitch(a,o,b){
+   switch(o){
+      case "+":
+         return add(a,b);
+         break;
+      case "-":
+         return substract(a,b);
+         break;
+      case "*":
+         return multiply(a*b);
+         break;
+      case "**":
+         return exponentation(a,b);
+         break;
+      case "/":
+         return divide(a,b);
+         break;
+      case "%":
+         return modulus(a,b) ;
+         break;
+   }
+}
+console.log(calculatorswitch(78,"+",35));
+console.log(calculatorswitch(78,"-",35));
+console.log(calculatorswitch(78,"*",35));
+console.log(calculatorswitch(78,"**",35));
+console.log(calculatorswitch(78,"/",35));
+console.log(calculatorswitch(78,"/",0));
+console.log(calculatorswitch(78,"%",35));
