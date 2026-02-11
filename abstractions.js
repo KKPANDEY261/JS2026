@@ -19,3 +19,7 @@ class d extends b{
 }
 const k=new d("karan","nsti");
 console.log(k);
+
+
+
+
