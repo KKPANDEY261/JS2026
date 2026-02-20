@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1> calculator  </h1>
+     num1
+     <input id="num1">
+     num2
+     <input id="num2">
+     operator
+     <input id="operator">
+     <button onclick="calculatorswitch()">submit</button>
+     <p id="result"></p>
+
+     <script>
+        function calculatorswitch(){
+        let a=parseInt(document.getElementById("num1").value);
+        let b=parseInt(document.getElementById("num2").value);
+        let o=document.getElementById("operator").value;
+           let  result="";
+   switch(o){
+      case "+":
+          result=a+b;
+         break;
+      case "-":
+          result=a-b;
+         break;
+      case "*":
+          result=a*b;
+         break;
+      case "**":
+          result=a**b;
+         break;
+      case "/":
+          result=a/b;
+         break;
+      case "%":
+          result=a%b;
+         break;
+   }
+   document.getElementById("result").innerHTML = "Result: " + result;
+}
+
+ 
+     </script>
+</body>
+</html>

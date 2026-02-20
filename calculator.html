@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+num1
+<input id="num1">
+num2
+<input id="num2">
+operator
+<input id="operator">
+<button onclick="calculator()">submit</button>
+<p id="result">result</p>
+    <script>
+         function calculator(){
+            let a=parseInt(document.getElementById("num1").value);
+            let b=parseInt(document.getElementById("num2").value);
+            let operator=document.getElementById("operator").value;
+            let result="";
+            
+        switch(operator){
+            case "+":
+                result=a+b;
+                break;
+            case "-":
+                result=a-b;
+                break;
+            case "*":
+                result=a*b;
+                break;
+            case "/":
+
+                    result=a/b;
+                    break;
+                case "%":
+                        result=a%b;
+                        break;
+                default : 
+                          result="provide your input";
+                   
+                    
+
+        }
+    document.getElementById("result").innerHTML=result;
+    }
+    </script>
+</body>
+</html>

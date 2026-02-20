@@ -1,0 +1,39 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40vh;
+}
+
+.whole_body {
+    color: blue;
+    border: 10px;
+    border-radius: 100%;
+}
+
+.whole_body :hover{
+    cursor: pointer;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  button {
+    height: 50px;
+    width: 39px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  

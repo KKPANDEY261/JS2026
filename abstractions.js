@@ -1,14 +1,11 @@
 class b{
     constructor(n1){
-    if (new.target === b){
-               console.log("you can't access this class ");
-    }else{
-        this.name=n1;
+    (new.target === b)?console.log("you can't access this class "):this.name=n1;
     }
     
 
 }
-}
+
 const c=new b("kk");
 console.log(c);
 class d extends b{
