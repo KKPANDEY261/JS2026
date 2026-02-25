@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ajax POST</title>
+</head>
+<body>
+    <input type="text" id="article" placeholder="Enter article">
+    <button id="btn">Save Article</button>   
+<script>
+let btn = document.getElementById("btn");
+btn.addEventListener("click", runAjax);
+function runAjax() {
+    let A = new XMLHttpRequest();
+    A.open("POST", "Post.txt", true);
+    A.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log("done");
+        } else if(this.status == 404) {
+            console.log("page not found");
+        }
+    }
+    let article = document.getElementById("article").value;
+    A.send(article);
+}
+</script>
+
+</body>
+</html>

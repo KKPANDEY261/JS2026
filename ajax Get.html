@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Ajax</title>
+</head>
+<body>
+    <button id="btn">Get Data</button>
+<script>
+let btn=document.getElementById("btn");
+btn.addEventListener("click",runAjax);
+
+function runAjax(){
+    let A=new XMLHttpRequest();
+A.open("GET","Get.txt",true);
+A.onreadystatechange= function(){
+if (this.readyState==4 && this.status==200){
+console.log(this.responseText);}
+else if(this.status==404){
+    console.log("page not found")
+}
+}
+A.send();}
+</script>
+
+</body>
+</html>

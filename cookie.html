@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
- <script> 
-        document.cookie="hello";
-console.log()
-    </script>
 <body>
-   
+    <script>
+        document.cookie="name=karan; expires= Sun,22 Feb 2026 07:35:00 UTC; Path=/;Secure";
+        document.cookie="a#$@%;aaaa"
+        let a=document.cookie;
+        document.write(a)
+        document.cookie=(encodeURIComponent("asdr$%$:hsghshd;hsfhd"))
+        a=document.cookie
+        document.write(decodeURIComponent(a))
+        
+    </script>
 </body>
 </html>
