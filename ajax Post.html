@@ -11,7 +11,7 @@ let btn = document.getElementById("btn");
 btn.addEventListener("click", runAjax);
 function runAjax() {
     let A = new XMLHttpRequest();
-    A.open("POST", "Post.txt", true);
+    A.open("POST", "Post.txt", true);  //post method is not allowed here
     A.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             console.log("done");
